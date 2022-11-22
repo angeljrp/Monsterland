@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Monsterlandia!</title>
+  <link rel="stylesheet" href="./styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  
+  <section id="seleccionar-mascota">
+    <h1 class="titulo">Monsterlandia</h1>
+    <h2 class="subtitulo">Chose Your monster</h2>
+    <div id='contenedorTarjetas' class="tarjetas">
+    </div>
+    <button id="boton-mascota">Ready</button>
+  </section>
+  <section id="ver-mapa">
+    <h2 class="subtitulo">Move for the map with total liberty</h2>
+    <canvas id="mapa"></canvas>
+    <button ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()" onmousedown="moverArriba()"
+      ontouchstart="moverArriba()">Up</button>
+    <div>
+      <button onmouseup="detenerMovimiento()" ontouchend="detenerMovimiento()" onmousedown="moverIzquierda()"
+        ontouchstart="moverIzquierda()">Left</button>
+      <button onmouseup="detenerMovimiento()" ontouchend="detenerMovimiento()" onmousedown="moverAbajo()"
+        ontouchstart="moverAbajo()">Down</button>
+      <button onmouseup="detenerMovimiento()" ontouchend="detenerMovimiento()" onmousedown="moverDerecha()"
+        ontouchstart="moverDerecha()">Right</button>
+    </div>
+  </section>
+  <section id="seleccionar-ataque">
+    <h1 class="titulo">monster</h1>
+    <h2 class="subtitulo">Time to fight</h2>
+    <div id='contenedorAtaques' class="tarjetas-ataques">
+    </div>
+    <div id="mensajes">
+      <p id="resultado">Good luck🤞>
+      <section id="reiniciar">
+        <button id="boton-reiniciar">Play again</button>
+      </section>
+    </div>
+    <div class="ataques">
+      <div class="ataques-jugador">
+        <p id="vidas-jugador">0</p>
+        <p id="mascota-jugador"></p>
+        <div id="ataques-del-jugador"></div>
+      </div>
+      <div class="ataques-enemigo">
+        <p id="vidas-enemigo">0</p>
+        <p id="mascota-enemigo"></p>
+        <div id="ataques-del-enemigo"></div>
+      </div>
+    </div>
+  </section>
+  <script src="./js/mokepon.js"></script>
+</body>
+
+</html>
